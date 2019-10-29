@@ -1,0 +1,68 @@
+\chapter{Introduction}\label{chapter:introduction}
+\section{Figures and Referencing}
+This section shows how to make figures and cross-reference them in the text.
+\Cref{fig1} shows an important figure.
+It is not a most to use \textbf{\textbackslash Cref\{labelName\}}; you still can use referencing using \textbf{Figure \textbackslash ref\{labelName\}}.
+Both will have the same effect.
+Figure \ref{fig2} uses the second referencing technique. 
+
+\begin{figure}
+	\centering
+	\includegraphics[]{example-image-a} 
+	\caption{Letter 'A' Sample Figure. $\sum_{i=0}^{1000} \prod_{j=1}^{300} i*j$ }\label{fig1}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=1.00]{example-image-b} 	
+	\caption{Letter 'B' Sample Figure. $\mathcal{B}=\{b_1,b_2,...,b_n\}, |B|\ge1$. }\label{fig2}
+\end{figure}
+
+\lipsum[1]
+
+
+\section{Tables and Referencing}
+Tables are similar to figures. You reference them the same ways. 
+\Cref{table1} shows a simple table.
+Try to avoid using vertical line. 
+Usually horizontal lines only  used.
+You can also use \texttt{tabularx} to create your table, which give you a better way in controlling the width of your table. 
+Example of using \texttt{tabularx} is shown in \Cref{table2}
+
+\begin{table}
+	\centering
+	\caption{Table caption example using \texttt{tabular}}\label{table1}
+\begin{tabular}{lll}
+	\toprule
+header 1 & header 2 & header 3 \\
+\midrule
+f1 & f2& f3\\
+f1 & f2& f3\\
+f1 & f2& f3\\
+f1 & f2& f3\\
+f1 & f2& f3\\
+f1 & f2& f3\\
+\bottomrule
+\end{tabular}
+
+\end{table}
+
+\begin{table}[t!]
+	\centering
+		\caption{Table caption example using \texttt{tabularx}}\label{table2}
+	\begin{tabularx}{\textwidth}{llX}
+		\toprule
+		header 1 & header 2 & header 3 \\
+		\midrule
+		f1 & f2& \lipsum[1]\\
+		f1 & f2& Sample Long Text. \\
+		f1 & f2& \textarabic{تجريب بالعربي}\\
+		f1 & f2&Sample Long Text.\\
+		f1 & f2& Sample Long Text.\\
+		f1 & f2& Sample Long Text.\\
+		\bottomrule
+	\end{tabularx}
+
+\end{table}
+
+\lipsum[1]

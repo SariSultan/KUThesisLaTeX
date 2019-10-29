@@ -1,0 +1,117 @@
+%The following are magic values to the compiler, do not change.
+% I highly recommend that you use TexLive + TexStudio Editor. 
+
+% !TeX program = xelatex
+% !TeX spellcheck = en_US
+% !TeX encoding = utf8
+% !BIB program = bibtex
+
+% author Sari Sultan: contact :: sarisultan[!at.]ieee[DOT]org
+%	If you need to contact me: 
+%	include "[KU LaTeX Template]" in the Subject line.
+
+%---------------------<START COPYRIGHT AND PERMISSION>---------------
+%Copyright <2019> <SARI SULTAN>
+%
+%		PERMISSION IS HEREBY GRANTED, FREE OF 		CHARGE, 
+%		TO ANY PERSON OBTAINING A COPY OF THIS     SOFTWARE 
+%		AND ASSOCIATED DOCUMENTATION FILES (THE "SOFTWARE")
+%		, TO DEAL IN THE SOFTWARE WITHOUT 	   RESTRICTION, 
+%		INCLUDING WITHOUT LIMITATION THE RIGHTS TO 	   USE, 
+%		COPY, MODIFY, MERGE, PUBLISH, 			DISTRIBUTE, 
+%		SUBLICENSE, AND/OR SELL COPIES OF THE 	  SOFTWARE, 
+%		AND TO PERMIT PERSONS TO WHOM THE SOFTWARE 		 IS 
+%		FURNISHED TO DO SO, SUBJECT TO THE 		  FOLLOWING 
+%												CONDITIONS:
+%
+%		THE SOFTWARE IS PROVIDED "AS IS", WITHOUT 	 WARRANTY 
+%		OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT 	  NOT
+%		LIMITED TO THE WARRANTIES OF 		 MERCHANTABILITY, 
+%		FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
+%		IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE 
+%		LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 	   LIABILITY, 
+%		WHETHER IN AN ACTION OF CONTRACT, TORT OR  OTHERWISE, 
+%		ARISING FROM, OUT OF OR IN CONNECTION WITH 		  THE 
+%		SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+%% ---------------------<END COPYRIGHT AND PERMISSION>--------------------
+% ---------------------<START DISCLAIMAR>--------------------------------
+% DISCLAIMAR: 	USING THIS TEMPLATE MIGH NOT RESULT IN THE 		SAME 
+%				TEMPLATE REQUIRED BY KUWAIT UNIVERSITY, IT IS 	 THE 
+%				STUDENT'S JOB TO REVIEW AND MAKE SURE THAT WHAT THEY
+%				DELIVER MEETS THE DEPARTMENT REQUIREMENTS. AND 	 THE 
+%				AUTHOR OF THIS TEMPLATE HOLDS NO RESPONSABILITY  FOR
+%				ANY DOCUMENTS GENERATED USING THIS 		   TEMPLATE.
+%				
+%				THIS IS A VOLUNTARY WORK DONE BY THE AUTHOR OF   THE
+%				TEMPLATE, THAT HAS NOT BEEN FUNDED BY ANY ENTITY  OR
+%				ORGANIZATION. THE MEAN REASON WHY I DID THIS      IS
+%				BECAUSE THE UNIVERSITY DID NOT HAVE A LaTeX TEMPLATE
+%				AND IT IS HARD TO WRITE THE THESIS USING MS    WORD. 
+% ---------------------<END DISCLAIMAR>----------------------------------
+
+\documentclass[12pt,oneside,a4paper,final,largeparskip,doublespace]{kuwaituniversitythesis} %do not change
+%============== I M P O R T A N T =========================
+\sampleThesis{COMMENT THIS LINE FOR YOUR THESIS. THIS LINE IS USED TO GENERATE A SAMPLE THESIS ONLY.} %ALWAYS COMMENT THIS LINE
+
+
+%<START> DO NOT REMOVE THE FOLLOWING 3 LINES
+\makeatletter %This is to fix a bug in Memoir package in TexLive 2018+
+\renewcommand{\counterwithin}{\@ifstar{\@csinstar}{\@csin}} %https://tex.stackexchange.com/questions/427451/dot-between-chapter-number-and-figure-number-disapear-after-update
+\makeatother
+%<STOP>
+
+%\usepackage{showframe}
+\input{basic_template_packages.tex}
+%\usepackage{showframe} %use this if you want to show the frame
+
+\begin{document}
+\sloppy
+\frontmatter
+\include{frontmatter/sample}% YOU DONT NEED THIS, REMOVE IT
+
+\include{frontmatter/cover}% cover page & copyright page & signatory page
+\include{frontmatter/abstract}% English abstract page
+
+\include{frontmatter/contents} %Table of contents 
+\include{frontmatter/dedicationANDacknowledgment}% Dedication page and acknowledgmenet page
+\mainmatter
+\pagenumbering{arabic}%KEEP THIS LINE
+\setcounter{page}{1}%KEEP THIS LINE
+
+%=======================================================
+%------------------------ YOUR CHAPTERS ----------------
+%=======================================================
+\include{chapters/introduction}
+\include{chapters/levels}
+\include{chapters/LiteratureReview}
+	
+
+
+%\backmatter
+%=======================================================
+%------------------------ REFERENCES        ------------
+%=======================================================
+\renewcommand{\bibname}{References} % this changes the name from bibliography to references. Dont move it.
+%if apalike did not work, use apa instead
+%\bibliographystyle{apalike}
+\bibliography{references}
+
+%=======================================================
+%------------------------ APPENDICES  ------------------
+%=======================================================
+\appendix
+\include{Appendix/appendixA}
+
+%=======================================================
+%------------------------ CV  ------------------
+%=======================================================
+\include{CV/CV}
+
+\backmatter
+%=======================================================
+%----------- ARABIC ABSTRACT AND COVER PAGE ------------
+%=======================================================
+\input{Arabic/abstractArabic}
+\input{Arabic/coverArabic}
+
+\end{document}

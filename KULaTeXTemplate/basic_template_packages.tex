@@ -1,0 +1,62 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%	 DO NOT ADD YOUR EXTRA PACKAGES TO THIS FILE %%%%%%%%
+%%%%%%%	KEEP THIS FILE AS IS - DO NOT CHANGE UNLESS ~~~~~~~~~
+%~~~~~~~ YOU KNOW WHAT YOU ARE DOING %%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[natbibapa]{apacite}
+\bibliographystyle{apacite}
+\renewcommand{\BDBL}{ } % Easter from the Graduate Studies told me they do not follow the APA guidelines. So they want to remove the (... last other name) and make it (et al.) only. I do not agree with them, but this is what they want. 
+%\usepackage[round,authoryear]{natbib}
+%\usepackage[numbers]{natbib}
+\usepackage[multidot]{grffile} %https://tex.stackexchange.com/questions/10574/includegraphics-dots-in-filename
+
+\usepackage{lipsum}%for generating dummy text
+
+\usepackage{hyperref} %can use hidelinks colorlinks=true,linkcolor=blue,urlcolor=black,
+\newcommand\myshade{85}
+\colorlet{myurlcolor}{violet}
+\colorlet{mycitecolor}{YellowOrange}
+\colorlet{mylinkcolor}{NavyBlue}
+\hypersetup{
+	linkcolor  = mylinkcolor!\myshade!black,
+	citecolor  = mycitecolor!\myshade!black,
+	urlcolor   = myurlcolor,
+	colorlinks = true,
+	breaklinks=true,
+	bookmarksopen=true,
+}
+
+\usepackage{listings} %To add code snippet
+\lstset{
+	basicstyle=\ttfamily,
+	columns=fullflexible,
+	breaklines=true,
+	postbreak=\raisebox{0ex}[0ex][0ex]{\color{red}$\hookrightarrow$\space}
+}
+
+
+\usepackage{enumitem} %for itemize item spacing
+\setlist[itemize]{noitemsep, topsep=1mm}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{booktabs}%for tables styling @{}
+\usepackage{cleveref} % use \Cref{} for tables and figures in the text
+\usepackage[tuenc]{fontspec}
+%\usepackage[T1]{fontenc} %This is for pdfLaTeX
+\PassOptionsToPackage{}{graphicx}%https://tex.stackexchange.com/questions/339942/lualatex-option-clash-for-package-graphicx-when-loaded-after-fontspec/339944
+\usepackage{polyglossia}
+\setmainlanguage{english}
+\setdefaultlanguage{english}
+%\setmainfont{Times New Roman}%[SmallCapsFont={TeX Gyre Termes},SmallCapsFeatures={Letters=SmallCaps},]
+%\newfontfamily\englishfontsf{Times New Roman}
+%\newfontfamily\englishfonttt{Times New Roman}
+%
+\setotherlanguage{arabic}
+\newfontfamily\arabicfont[Script=Arabic,Mapping=arabicdigits, BoldFont=Times New Roman Bold]{Times New Roman}
+
+\DisemulatePackage{tabularx} %do not move from here
+\usepackage{tabularx} 
+
+\usepackage{newpxtext,newpxmath}
+

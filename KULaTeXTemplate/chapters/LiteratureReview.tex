@@ -1,0 +1,43 @@
+\chapter{Literature Review and Citations}\label{chapter:litreview}
+You can cite articles with the \texttt{\textbackslash citep\{source:bibtex\}} or \texttt{\textbackslash citet\{source:bibtex\}} command \big(\texttt{\textbackslash citet\{source:bibtex\}} is equal to using \texttt{\textbackslash cite\{source:bibtex\}}\big).
+You should include the bibtex of your source in the \textbf{references.bib} file that exists in the main directory. 
+Example of citation \texttt{\textbackslash citep\{source:bibtex\}} citation is \citep{sultan2019container}. 
+Example of citation \texttt{\textbackslash citet\{source:bibtex\}} citation is \citet{sultan2019container}. 
+You can also use \texttt{\textbackslash cite\{source:bibtex\}} which will be like this \cite{sultan2019container}.
+For a single author papers the citation style will look like this \cite{sultan2019privacy}.
+If you check your file \textbf{references.bib} you will find a bibtex entry as follows:
+
+%HERE I SHOULD NOTE AN IMPORTANT ISSUE IN THE APACITATION
+% WHEN THE REFERNECE IS FIRST CITED, THE CITATION WILL PUT THE FIRST 6 AUTHORS LAST NAMES, THEN WHEN THE SAME REFERENCE IS CITED AGAIN IT WILL PUT THE FIRST AUTHOR FOLLOWED BY et al. .THIS IS THE APA STANDARD. 
+
+\begin{lstlisting}[frame=single]
+@article{sultan2019container,
+title={Container Security: Issues, Challenges, and the Road Ahead},
+author={Sultan, Sari and Ahmad, Imtiaz and Dimitriou, Tassos},
+journal={IEEE Access},
+volume={7},
+pages={52976--52996},
+year={2019},
+publisher={IEEE}
+}
+\end{lstlisting}
+
+\section{Citation Style}
+\textbf{The default citation style is the APA which is like the one used in this document.}  that is using \texttt{\textbackslash citep\{source:bibtex\}} or \texttt{\textbackslash citet\{source:bibtex\}}.
+
+
+%Comments below are from earlier versions
+%However, you can easily convert it to the regular format that looks like this [\citenum{turing1939systems}]. Don't use this way to make citation i just did it as example (at the time of writing V3.0, the college of graduate studies require APA format (i.e. author year, not number [])), follow the next instruction to covert it.
+%To convert it you need to change the first line in included file with the template \textbf{basic\_template\_packages.tex}.
+%Open the file and change the first line from \texttt{\textbackslash usepackage[round,authoryear]\{natbib\}} to \texttt{\textbackslash usepackage[numbers]\{natbib\}}.
+%This will also change the bibliography in the last page too. 
+
+\section{Large number of authors}
+%In the reference, you should include only the first 6 authors. If you have larger number of authors you should change it manually. 
+
+For example, this paper \citep{arnett1988american} has many authors (more than 6). This template will automatically list the first six authors. This will be done automatically, \textbf{you need to change the last author name in the bibtex for et al.}.
+
+\section{Common Error}
+The most common error you may get for the references is due to missing the author or year fields in the bibtex item. Make sure all your references have author and year fields.  
+
+
